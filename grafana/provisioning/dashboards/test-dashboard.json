@@ -1,0 +1,66 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "hamedkarbasi93-nodegraphapi-datasource",
+        "uid": "P30CC146E954DC3C7"
+      },
+      "gridPos": {
+        "h": 28,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "targets": [
+        {
+          "datasource": {
+            "type": "hamedkarbasi93-nodegraphapi-datasource",
+            "uid": "P30CC146E954DC3C7"
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "Panel Title",
+      "type": "nodeGraph"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 39,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Test",
+  "uid": "e3e0fcec-b7d4-4954-a635-4d4384ec73e7",
+  "version": 1,
+  "weekStart": ""
+}

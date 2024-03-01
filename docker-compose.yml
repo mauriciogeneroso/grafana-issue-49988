@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  application:
+    container_name: application
+    build: application
+    restart: always
+    ports:
+      - "8080:8080"
+      - "5005:5005"
+    environment:
+      - JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
+
+  grafana:
+    build: ./grafana
+    container_name: grafana
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=hamedkarbasi93-nodegraphapi-datasource
+      - APPLICATION_URL=http://application:8080/
